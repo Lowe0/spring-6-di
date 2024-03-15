@@ -4,10 +4,10 @@ import com.example.spring6di.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class PropertyInjectedController {
+public class ConstructorInjectedController {
     private final GreetingService greetingService;
 
-    public PropertyInjectedController(GreetingService greetingService) {
+    public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
