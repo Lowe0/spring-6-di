@@ -9,24 +9,6 @@ import org.springframework.context.ApplicationContext;
 @SpringBootTest
 class Spring6DiApplicationTests {
 
-    @Autowired
-    ApplicationContext applicationContext;
-
-    @Autowired
-    MyController myController;
-
-    @Test
-    void autowireController(){
-        System.out.println(myController.sayHello());
-    }
-
-    @Test
-    void getControllerFromContext() {
-        MyController myController = applicationContext.getBean(MyController.class);
-
-        System.out.println(myController.sayHello());
-    }
-
     @Test
     void contextLoads() {
     }
