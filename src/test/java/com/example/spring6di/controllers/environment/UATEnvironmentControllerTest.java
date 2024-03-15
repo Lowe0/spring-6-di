@@ -1,4 +1,4 @@
-package com.example.spring6di.controllers.i18n;
+package com.example.spring6di.controllers.environment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,14 +7,14 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles({"DE", "dev"})
+@ActiveProfiles({"uat", "EN"})
 @SpringBootTest
-class MyI18NControllerTestDE {
-
+class UATEnvironmentControllerTest {
     @Autowired
-    MyI18NController controller;
+    EnvironmentController controller;
+
     @Test
-    void sayHello() {
-        System.out.println(controller.sayHello());
+    void getEnvironment() {
+        System.out.println("Current environment: " + controller.getEnvironment());
     }
 }
