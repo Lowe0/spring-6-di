@@ -12,10 +12,6 @@ class ConstructorInjectedControllerTest {
     @Autowired
     ConstructorInjectedController controller;
 
-    @BeforeEach
-    void setUp() {
-    }
-
     @Test
     void sayHello() {
         System.out.println(controller.sayHello());
